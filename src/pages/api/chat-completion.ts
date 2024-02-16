@@ -47,7 +47,7 @@ const handler = async (req: Request): Promise<Response> => {
       }
       apiUrl = `${apiBaseUrl}/v1/chat/completions`
       apiKey = process.env.OPENAI_API_KEY || ''
-      model = 'recursal/eagle-7b' // todo: allow this to be passed through from client and support gpt-4
+      model = 'mistralai/mistral-7b-instruct:free' // todo: allow this to be passed through from client and support gpt-4
     }
     const stream = await OpenAIStream(apiUrl, apiKey, model, messagesToSend)
 
@@ -71,7 +71,7 @@ const OpenAIStream = async (apiUrl: string, apiKey: string, model: string, messa
     body: JSON.stringify({
       model: model,
       frequency_penalty: 0,
-      max_tokens: 32768,
+      max_tokens: 8192,
       messages: [
         {
           role: 'system',
