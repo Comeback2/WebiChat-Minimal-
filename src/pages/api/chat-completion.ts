@@ -47,7 +47,7 @@ const handler = async (req: Request): Promise<Response> => {
       }
       apiUrl = `${apiBaseUrl}/v1/chat/completions`
       apiKey = process.env.OPENAI_API_KEY || ''
-      model = 'google/gemini-pro-1.5' // todo: allow this to be passed through from client and support gpt-4
+      model = 'mistral-large' // todo: allow this to be passed through from client and support gpt-4
     }
     const stream = await OpenAIStream(apiUrl, apiKey, model, messagesToSend)
 
