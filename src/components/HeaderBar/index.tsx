@@ -16,7 +16,7 @@ const HeaderBar = () => {
         <div className={styles.logoBar}>
           <Link href="/">
             <img alt="logo" src="/logo192.png" />
-            <h1>WebiChat 7B T4 - minimalist interface </h1>
+            <h1>WebiChat 32K - 04.04.24 - minimalist interface </h1>
           </Link>
         </div>
         <Space className={styles.right} size={0}>
